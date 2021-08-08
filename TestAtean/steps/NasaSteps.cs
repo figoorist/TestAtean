@@ -8,9 +8,9 @@ namespace TestAtean.steps
 {
     class NasaSteps
     {
-        HomePage homePage;
-        EBooksPage eBooksPage;
-        BookPage bookPage;
+        readonly HomePage homePage;
+        readonly EBooksPage eBooksPage;
+        readonly BookPage bookPage;
 
         public NasaSteps(HomePage homePage,
             EBooksPage eBooksPage,
@@ -33,8 +33,6 @@ namespace TestAtean.steps
             eBooksPage.GetBookLinkByNumber(bookNumberOnPage).Click();
             bookPage.IsPresented();
             bookPage.GetPDFLink().Click();
-            eBooksPage.IsPresented();
-
         }
     }
 }
